@@ -1,0 +1,25 @@
+{
+  "name": "electron-jvm",
+  "version": "0.1.0",
+  "private": true,
+  "license": "(c) Copyright 2016 Simon Twogood",
+  "author": {
+    "name": "Simon Twogood"
+  },
+  "main": "main.js",
+  "scripts": {
+    "start": "electron main.js",
+    "package-windows": "electron-packager . --platform=win32 --arch=x64 --out=build --overwrite"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/electron-jvm.git"
+  },
+  "devDependencies": {
+    "electron-prebuilt": "1.2.2",
+    "electron-packager": "latest"
+  },
+  "dependencies": {
+    "electron-window-state": "^3.0.3"
+  }
+}
