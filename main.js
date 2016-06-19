@@ -11,6 +11,7 @@ const exec = require('child_process').execFile;
 const app = electron.app;
 
 // By default this will try to use the java version installed on the computer. It's also possible to bundle a JRE
+// and then use a relative path to it. 
 const apiServerCmd = 'java';
 
 // The following arguments are a sample and can be modified to launch whatever java based server you want. All that
@@ -33,7 +34,9 @@ const apiServerProc = exec(apiServerCmd, apiServerArgs, { cwd: __dirname }, func
 });
 
 // This will real all stdio output from the started server and wait to see what port and and address the server 
-// is listening on. Once it has the URL, the browser window will load it.
+// is listening on. Once it has the URL, the browser window will load it. Be sure to check out the project's
+// README to get an understanding of what the server must print to stdio in order for the electron application
+// to understand the address that the server is listening on.
 apiServerProc.stdout.on('data', function (data) {
     var message = data.toString();
 
