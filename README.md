@@ -16,6 +16,15 @@ or anything else with just a few small tweaks.
 
 ## How to get this working
 
+Reading through the comments in *main.js* should provide you with the details, but you will need to update the *apiServerArgs* command with the arguements required
+to start your server. By default it runs an executable jar, *api-server/backend-server.jar*. 
+
+The part that will require changes to either you back end server or to the electron start up code is how electron determines what address and port the server is
+listening on. By default it expects the following to be writen to **stdio**:
+
+```
+API Deployed: http://[address]:[port]
+```
 
 
 
