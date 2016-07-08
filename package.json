@@ -16,10 +16,10 @@
     "url": "git+https://gitlab.com/electron-jvm.git"
   },
   "devDependencies": {
-    "electron-prebuilt": "1.2.2",
+    "electron-prebuilt": "1.2.6",
     "electron-packager": "latest"
   },
   "dependencies": {
-    "electron-window-state": "^3.0.3"
+    "electron-window-state": "3.0.3"
   }
 }
